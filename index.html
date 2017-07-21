@@ -1,304 +1,372 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>my website</title>
-    <link rel="stylesheet" href="css/framework.css">
-    <link rel="stylesheet" href="css/my.css">
+<title>Mrbelle  bootstrap website Template| Home :: w3layouts</title>
+	<meta charset="utf-8">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link href="css/demo.css" rel="stylesheet" type="text/css" />-->
+<link rel="stylesheet" href="css/sticky-navigation.css" />
+<!------ js ------>
+<script src="js/jquery.min.js"></script>
+<script src="js/responsiveslides.min.js"></script>
+<!------ js ------>
+<!---- start-smoth-scrolling---->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+<!---- start-smoth-scrolling---->
+<script>
+$(function() {
+
+	// grab the initial top offset of the navigation 
+	var sticky_navigation_offset_top = $('#sticky_navigation').offset().top;
+	
+	// our function that decides weather the navigation bar should have "fixed" css position or not.
+	var sticky_navigation = function(){
+		var scroll_top = $(window).scrollTop(); // our current vertical position from the top
+		
+		// if we've scrolled more than the navigation, change its position to fixed to stick to top, otherwise change it back to relative
+		if (scroll_top > sticky_navigation_offset_top) { 
+			$('#sticky_navigation').css({ 'position': 'fixed', 'top':0, 'left':0 });
+		} else {
+			$('#sticky_navigation').css({ 'position': 'relative' }); 
+		}   
+	};
+	
+	// run our function on load
+	sticky_navigation();
+	
+	// and run it again every time you scroll
+	$(window).scroll(function() {
+		 sticky_navigation();
+	});
+	
+	// NOT required:
+	// for this demo disable all links that point to "#"
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); 
+	});
+	
+});
+</script>
+
+<!--- fonts --->
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300italic,400,700,900,300italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,200,900,800,700,600,500,300,100' rel='stylesheet' type='text/css'>
+<!--- fonts --->
+
 </head>
 <body>
-    <header>
-        <!--banner-->
-        <div class="banner" id="myname">
-            <div class="container">
-                <div class="row">
-                    <div class="intro">
-                        <div class="intro-left col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                            <img src="img/1.jpg">
-                        </div>
-                        <div class="intro-right col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                            <h1>陈园</h1>
-                            <p>前端工程师<br>Front End Developer</p>
-                            <a href="#about" class="btn1">About Me</a>
-                            <a href="#" class="btn2">My Portfolio</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!--导航栏-->
-    <!--手机屏下拉效果-->
-    <nav class="nav">
-        <div class="navbar">
-            <div class="container">
-                <div class="row">
-                    <div class="nav-left">
-                        <a href="#myname" class="nav-name">陈园</a>
-                    </div>
-                    <a href="#" class="nav-icon"><i class="iconfont">&#xe651;</i></a>
-                    <div class="nav-right col-lg-10 col-md-10 col-xs-hidden">
-                        <ul class="nav-text">
-                            <li class="nav-list"><a href="#contact">contact</a></li>
-                            <li class="nav-list"><a href="#experience">experience</a></li>
-                            <li class="nav-list"><a href="#portfolio">portfolio</a></li>
-                            <li class="nav-list"><a href="#skills">skills</a></li>
-                            <li class="nav-list"><a href="#about">about</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <!--主体部分-->
-    <main>
-        <!--about-->
-        <div class="ab"  id="about">
-            <div class="container">
-                <div class="title">
-                    <h2> about me</h2>
-                    <div></div>
-                </div>
-                <div class="row">
-                    <div class="aboutimg">
-                        <img src="img/1.jpg" class="about-img">
-                    </div>
-                    <div class="about-text">
-                        <p>技术热情很重要，我不需要单纯的把技术当做吃饭家伙的人。做事态度很重要，我不想招聘天天抱怨却不去解决问题的人。学习能力，总结能力，能够自我进步的人，而不是需要手把手教的。分析能力，其实也就是解决问题的能力。技术经验，当然越多越好，如果缺乏，至少要表现出成长潜力</p>
-                        <p>技术热情很重要，我不需要单纯的把技术当做吃饭家伙的人。做事态度很重要，我不想招聘天天抱怨却不去解决问题的人。学习能力，总结能力，能够自我进步的人，而不是需要手把手教的。分析能力，其实也就是解决问题的能力。技术经验，当然越多越好，如果缺乏，至少要表现出成长潜力</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--skills-->
-        <div class="sk"  id="skills">
-            <div class="container">
-                <div class="title">
-                    <h2>my skills</h2>
-                    <div></div>
-                </div>
-                <div class="row">
-                    <ul class="list">
-                        <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 skill">
-                            <div class="circle"></div>
-                            <h4>Photoshop</h4>
-                        </li>
-                        <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 skill">
-                            <div class="circle"></div>
-                            <h4>HTML5</h4>
-                        </li>
-                        <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 skill">
-                            <div class="circle"></div>
-                            <h4>CSS3</h4>
-                        </li>
-                        <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 skill">
-                            <div class="circle"></div>
-                            <h4>JavaScript</h4>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!--portfolio-->
-        <div class="port"  id="portfolio">
-            <div class="container">
-                <div class="title">
-                    <h2>my portfolio</h2>
-                    <div></div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diamcommodo nibh ante facilisis.</p>
-                </div>
-                <div class="row">
-                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                        <div class="portfolio-item">
-                            <div class="hover-bg">
-                                <a href="">
-                                    <div class="hover-text"></div>
-                                    <img src="img/11.jpg" class="img-responsive">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                        <div class="portfolio-item">
-                            <div class="hover-bg">
-                                <a href="">
-                                    <div class="hover-text"></div>
-                                    <img src="img/12.jpg" class="img-responsive">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                        <div class="portfolio-item">
-                            <div class="hover-bg">
-                                <a href="">
-                                    <div class="hover-text"></div>
-                                    <img src="img/03.jpg" class="img-responsive">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                        <div class="portfolio-item">
-                            <div class="hover-bg">
-                                <a href="">
-                                    <div class="hover-text"></div>
-                                    <img src="img/04.jpg" class="img-responsive">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                        <div class="portfolio-item">
-                            <div class="hover-bg">
-                                <a href="">
-                                    <div class="hover-text"></div>
-                                    <img src="img/05.jpg" class="img-responsive">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                        <div class="portfolio-item">
-                            <div class="hover-bg">
-                                <a href="">
-                                <div class="hover-text"></div>
-                                <img src="img/06.jpg" class="img-responsive">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                        <div class="portfolio-item">
-                            <div class="hover-bg">
-                                <a href="">
-                                    <div class="hover-text"></div>
-                                    <img src="img/07.jpg" class="img-responsive">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                        <div class="portfolio-item">
-                            <div class="hover-bg">
-                                <a href="">
-                                    <div class="hover-text"></div>
-                                    <img src="img/08.jpg" class="img-responsive">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--experience-->
-        <div class="exp"  id="experience">
-            <div class="container">
-                <div class="title">
-                    <h2>experience</h2>
-                    <div></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="work-grid">
-                            <h3>2013 - Now</h3>
-                            <div class="work-grid-info">
-                                <h4>Google</h4>
-                                <h5>Visual Designer</h5>
-                                <p>Now that there is the Tec-9, a crappy spray gun from South Miami.
-                                    This gun is advertised as the most popular gun in American crime.
-                                    Do you believe that shit? It actually says that in the little book
-                                    that comes with it: the most popular gun in</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="work-grid">
-                            <h3>2013 - Now</h3>
-                            <div class="work-grid-info">
-                                <h4>Google</h4>
-                                <h5>Visual Designer</h5>
-                                <p>Now that there is the Tec-9, a crappy spray gun from South Miami.
-                                    This gun is advertised as the most popular gun in American crime.
-                                    Do you believe that shit? It actually says that in the little book
-                                    that comes with it: the most popular gun in</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="work-grid">
-                            <h3>2013 - Now</h3>
-                            <div class="work-grid-info">
-                                <h4>Google</h4>
-                                <h5>Visual Designer</h5>
-                                <p>Now that there is the Tec-9, a crappy spray gun from South Miami.
-                                    This gun is advertised as the most popular gun in American crime.
-                                    Do you believe that shit? It actually says that in the little book
-                                    that comes with it: the most popular gun in</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-       <!--contact-->
-        <!--字体图标-->
-        <div class="cont"  id="contact">
-            <div class="container">
-                <div class="title">
-                    <h2>contant me</h2>
-                    <div></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="col-md-4 col-sm-12 col-xs-12"> <i></i>
-                            <p>山西省运城市</p>
-                        </div>
-                        <div class="col-md-4 col-sm-12 col-xs-12"> <i></i>
-                            <p>914273917@qq.com</p>
-                        </div>
-                        <div class="col-md-4 col-sm-12 col-xs-12"> <i></i>
-                            <p> 13103483988</p>
-                        </div>
-                    </div>
-                    <div class="col-md-8 col-md-offset-2">
-                        <h3>Leave me a message</h3>
-                        <form name="sentMessage" id="contactForm">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" id="name" class="form-control" placeholder="Name" required="required">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="email" id="email" class="form-control" placeholder="Email" required="required">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div id="success"></div>
-                            <button type="submit" class="btn btn-default">Send Message</button>
-                        </form>
-                        <div class="social">
-                            <ul>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+<!---->
+<div id="demo_top_wrapper">
+	<div id="demo_top">
+			<div class="header" id="home">
+				<div class="logo">
+				<a href="#"><img src="images/my.jpg" alt=""/></a>
+				</div>
+			</div>
+	 </div>
+	 <div id="sticky_navigation_wrapper">
+		 <div id="sticky_navigation">
+			  <div class="top-menu">
+				 <div class="container">
+						<a href="#home"><img class="cylogo" src="images/logo.png" alt=""></a>
+					 <!--<a href="#" class="menu"><i class="iconfont">&#xe651;</i></a>-->
+						<ul>
+						<li><a class="scroll" href="#about">ABOUT</a></li>
+						<li><a class="scroll" href="#blog">PORTFOLIO</a></li>
+						<li><a class="scroll" href="#clients">EXPRIENCE</a></li>
+						<li><a class="scroll" href="#contact">CONTACT</a></li>
+						<a href="#"><span class="img1"> </span></a>
+						<a href="#"><span class="img2"> </span></a>
+						<a href="#"><span class="img3"> </span></a>				 
+						<div class="clearfix"></div>
+						</ul>
+					 <div class="clearfix"></div>
+				 </div>
+			  </div>
+		 </div>
+	 </div>
+</div>
+<!---->
+<section id="main">
+<div class="about" id="about">
+	 <h3>WELCOME TO MY WORLD</h3>
+	 <b></b>
+	 <div class="container">
+		 <div class="about-grids">
+			 <div class="col-md-6 about-info">		
+				 <h4>自我评价</h4>
+				  <label></label>
+				 <h4>前端工程师</h4>
+				 <p>技术方面：
+					 精通html5，css3，js，jquery，能够熟练使用bootstrap等框架，熟悉PHP后台语言。熟练掌握移动端布局。熟练使用git、svn等版本管理工具。
+					 性格方面：
+					 能够很好的融入团队生活，与他人合作，并且对前端工作认真负责，有良好的学习能力。
+				 </p>
+			 </div> 
+			 <div class="col-md-6 about-skill">
+				 <h4>Skills</h4>
+				  <label></label>
+					<div class="skill-grid1">
+						 <div class="skill-bar">
+						 <div class="info"><p>HTML/CSS</p></div>
+						 </div>
+						 <div class="icon"><img src="images/skil.png"></div>
+						 <div class="clearfix"></div>
+					 </div>
+					 <div class="clearfix"></div>
+					 <div class="skill-grid2">
+						 <div class="skill-bar2">
+						 <div class="info2"><p>JS/JQUERY</p></div>
+						 <div class="clearfix"></div>
+						 </div>
+						 <div class="icon"><img src="images/skil.png"></div>
+						 <div class="clearfix"></div>
+					 </div>
+					 <div class="clearfix"></div>
+					 <div class="skill-grid3">
+						 <div class="skill-bar3">
+						 <div class="info3"><p>AJAX</p></div>
+						 <div class="clearfix"></div>
+						 </div>
+						 <div class="icon"><img src="images/skil.png"></div>
+						 <div class="clearfix"></div>
+					 </div>
+			 </div>
+			 <div class="clearfix"></div>
+		 </div>			 
+	 </div>
+	  <a></a>
+</div>	
+<!---->
+<div class="blog" id="blog">
+	 <h3>PORTFOLIO</h3>
+	 <small>我的项目</small>
+	 <p><i>my portfolio</i></p>
+	 <div class="container">	
+		 <div class="blog-top" id="top-sec">
+			 <div class="blog-img">
+				<img src="images/img1.jpg" alt="" class="img-responsive" />
+			 </div>
+			 <div class="img-desc">
+				 <h4>鱼设计APP</h4>
+				 <span></span>
+				 <p>该项目为私人订制家具项目，往常人们购买家具时，需要去往各个家具店选购。通过该APP，用户可以通过该APP为用户搭建的场景，更好的选择自己所需的各类家具。
+				 </p>
+				 <span></span>
+				 <div class="icons">
+						<a href="#"><span class="img1"> </span></a>
+						<a href="#"><span class="img2"> </span></a>
+						<a href="#"><span class="img3"> </span></a>
+				   </div>
+					<div class="caption">
+						<a href="http://cyfish.duapp.com/"><img src="images/link.png" alt=""/></a>
+					</div>
+					<div class="dmnd"></div>				
+			 </div>
+		 </div>
+		 <div class="blog-top" id="top-sec">
+			 <div class="blog-img">
+				<img src="images/img2.jpg" alt="" class="img-responsive" />
+			 </div>
+			 <div class="img-desc" >
+				 <h4>食神居APP</h4>
+				 <span></span>
+				 <p>该项目为移动端项目，美食APP。该APP通过视频向用户展示了各个美食的制作方法，用户可以学习制作。并且用户可以通过点餐系统，选择食材，自行组合菜单。
+				 </p>
+					<span></span>
+					<div class="icons">
+						<a href="#"><span class="img1"> </span></a>
+						<a href="#"><span class="img2"> </span></a>
+						<a href="#"><span class="img3"> </span></a>
+				    </div>
+					<div class="caption">
+						<a href="#"><img src="images/link.png" alt=""/></a>
+					</div>
+					<div class="dmnd"></div>				
+			 </div>
+		 </div>
+		 <div class="clearfix"></div>
+		 
+		 <div class="blog-top" id="bottom-sec">		 
+			 <div class="img-desc blog-sec" >
+				<h4>一碗面</h4>
+				<span></span>
+				 <p>该项目为pc端项目，页面通过使用bootstrap框架实现网站的响应式效果，适配于各个屏幕。通过该项目向用户宣传一碗面企业，吸引更多商户加盟，并且向广大用户宣传了我国历史悠久的面食文化。</p>
+				 <span></span>
+				 <div class="icons">
+					 <a href="#"><span class="img1"> </span></a>
+					 <a href="#"><span class="img2"> </span></a>
+					 <a href="#"><span class="img3"> </span></a>
+				 </div>
+				   <div class="caption2">
+						<a href=""><img src="images/link.png" alt=""/></a>
+					</div>
+					<div class="dmnd2"></div>	
+			 </div>
+			 <div class="blog-img img-sec">
+				<img src="images/img3.jpg" alt="" class="img-responsive" />
+			 </div>		 
+		 </div>		 
+		 
+		 <div class="blog-top" id="bottom-sec">		 
+			 <div class="img-desc blog-sec" >
+				<h4>BLOG</h4>
+				<span></span>
+				 <p>该项目为pc端项目，页面通过使用bootstrap框架实现网站的响应式效果，适配于各个屏幕。通过该项目向用户宣传一碗面企业，吸引更多商户加盟，并且向广大用户宣传了我国历史悠久的面食文化。.</p>
+				 <span></span>
+				<div class="icons">
+					 <a href="#"><span class="img1"> </span></a>
+					 <a href="#"><span class="img2"> </span></a>
+					 <a href="#"><span class="img3"> </span></a>
+				 </div>
+				   <div class="caption2">
+						<a href=""><img src="images/link.png" alt=""/></a>
+					</div>
+					<div class="dmnd2"></div>	
+			 </div>
+			 <div class="blog-img img-sec">
+				<img src="images/img4.jpg" alt="" class="img-responsive" />
+			 </div>		 
+		 </div>	
+		 <!--<div class="clearfix"></div>-->
+			<!--<div class="load"><a href="#">Load More</a></div>-->
+	 </div>
+</div>
+<!---->
+<div class="client" id="clients">
+		 <h3>WHAT THEY SAY</h3>
+		 <small></small>
+		 <script>
+		// You can also use "$(window).load(function() {"
+		$(function () {
+		  // Slideshow 1
+		  $("#slider1").responsiveSlides({
+			 auto: true,
+			 nav: true,
+			 speed: 500,
+			 namespace: "callbacks",
+		  });
+		});
+	  </script>
+	  <div class="container2">
+			<div class="slider">
+				<ul class="rslides" id="slider1">
+				 <li>
+				 <div class="person1"></div>
+				 <div class="about-add-grid">
+				 <p>"  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.sunt in culpa qui officia deserunt mollit anim id est laborum. pariatur sunt in culpa qui. Stet clita</p>
+					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserun.sint occaecat cupidatat non proident. </p>
+				 <a href="#"><b>Victoiria Davydova</b>,Vogue Russia</a>		 
+				 </div>
+				 <div class="clearfix"></div>
+			  </li>	
+			  <li>
+				 <div class="person2"></div>
+				 <div class="about-add-grid">
+				 <p>"  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.sunt in culpa qui officia deserunt mollit anim id est laborum. pariatur sunt in culpa qui. Stet clita</p>
+					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserun.sint occaecat cupidatat non proident. </p>
+				 <a href="#"><b>Victoiria Davydova</b>,Vogue Russia</a>		 
+				 </div>
+				 <div class="clearfix"></div>
+			  </li>	
+			 </ul>		
+			</div>
+	  </div>
+</div>
+<!---->
+<div class="container">
+	 <ul id="flexiselDemo1">
+			<li>
+				<div class="biseller-column">
+				<img src="images/s1.png" alt="">
+				</div>
+			</li>
+			<li>
+				<div class="biseller-column">
+				<img src="images/s2.png" alt="">
+				</div>
+			</li>
+			<li>
+				<div class="biseller-column">
+				<img src="images/s3.png" alt="">
+				</div>
+			</li>
+			<li>
+				<div class="biseller-column">
+				<img src="images/s2.png" alt="">
+				</div>
+			</li>
+			<li>
+				<div class="biseller-column">
+				<img src="images/s1.png" alt="">
+				</div>
+			</li>
+			<li>
+				<div class="biseller-column">
+				<img src="images/s3.png" alt="">
+				</div>
+			</li>
+		</ul>
+		<script type="text/javascript">
+		 $(window).load(function() {
+			$("#flexiselDemo1").flexisel({
+				visibleItems: 3,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,    		
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+				responsiveBreakpoints: { 
+					portrait: { 
+						changePoint:480,
+						visibleItems: 1
+					}, 
+					landscape: { 
+						changePoint:640,
+						visibleItems: 2
+					},
+					tablet: { 
+						changePoint:768,
+						visibleItems: 3
+					}
+				}
+			});
+			
+		});
+	   </script>
+	   <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+</div>   
+<!---->
+<div class="contact text-center" id="contact">
+	<h3>CONTACT ME</h3>
+	<i class="line"></i>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam est metus, cursus quis tincidunt sit amet, varius sit amet lorem</p>
+	<form>
+	<input type="text" placeholder="Name" required/>
+	<input type="text" placeholder="E-mail" required/>
+	<textarea placeholder="Message"></textarea>
+	<input type="submit" value="SEND"/>
+	</form>
+</div>
+<!---->
+<div class="fotter">
+	 <div class="scale"></div>
+	 <a href=""><img src="images/ftr.logo.png" alt="" /></a>
+	 <p>Template by <a href="http://w3layouts.com/">W3layouts</a></p>
+</div>
+
+<!---->
+</section>	
+<!---->
 </body>
 </html>
