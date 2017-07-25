@@ -1,372 +1,348 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>Mrbelle  bootstrap website Template| Home :: w3layouts</title>
-	<meta charset="utf-8">
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<title>陈园的个人主页</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--<link href="css/demo.css" rel="stylesheet" type="text/css" />-->
-<link rel="stylesheet" href="css/sticky-navigation.css" />
-<!------ js ------>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Curriculum vitae Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="applisalonion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />	
+<link rel="stylesheet" href="css/swipebox.css">
+<link href="css/font-awesome.min.css" rel='stylesheet' type='text/css' />	
+<!--//Custom Theme files-->
+<!--web-font-->
+	<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Merriweather+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<!--//web-font-->
 <script src="js/jquery.min.js"></script>
-<script src="js/responsiveslides.min.js"></script>
-<!------ js ------>
-<!---- start-smoth-scrolling---->
-		<script type="text/javascript" src="js/move-top.js"></script>
-		<script type="text/javascript" src="js/easing.js"></script>
-		<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-				});
-			});
-		</script>
-<!---- start-smoth-scrolling---->
-<script>
-$(function() {
-
-	// grab the initial top offset of the navigation 
-	var sticky_navigation_offset_top = $('#sticky_navigation').offset().top;
-	
-	// our function that decides weather the navigation bar should have "fixed" css position or not.
-	var sticky_navigation = function(){
-		var scroll_top = $(window).scrollTop(); // our current vertical position from the top
-		
-		// if we've scrolled more than the navigation, change its position to fixed to stick to top, otherwise change it back to relative
-		if (scroll_top > sticky_navigation_offset_top) { 
-			$('#sticky_navigation').css({ 'position': 'fixed', 'top':0, 'left':0 });
-		} else {
-			$('#sticky_navigation').css({ 'position': 'relative' }); 
-		}   
-	};
-	
-	// run our function on load
-	sticky_navigation();
-	
-	// and run it again every time you scroll
-	$(window).scroll(function() {
-		 sticky_navigation();
-	});
-	
-	// NOT required:
-	// for this demo disable all links that point to "#"
-	$('a[href="#"]').click(function(event){ 
-		event.preventDefault(); 
-	});
-	
-});
-</script>
-
-<!--- fonts --->
-<link href='http://fonts.googleapis.com/css?family=Lato:100,300italic,400,700,900,300italic,700italic,900italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Raleway:400,200,900,800,700,600,500,300,100' rel='stylesheet' type='text/css'>
-<!--- fonts --->
-
 </head>
 <body>
-<!---->
-<div id="demo_top_wrapper">
-	<div id="demo_top">
-			<div class="header" id="home">
-				<div class="logo">
-				<a href="#"><img src="images/my.jpg" alt=""/></a>
-				</div>
-			</div>
-	 </div>
-	 <div id="sticky_navigation_wrapper">
-		 <div id="sticky_navigation">
-			  <div class="top-menu">
-				 <div class="container">
-						<a href="#home"><img class="cylogo" src="images/logo.png" alt=""></a>
-					 <!--<a href="#" class="menu"><i class="iconfont">&#xe651;</i></a>-->
-						<ul>
-						<li><a class="scroll" href="#about">ABOUT</a></li>
-						<li><a class="scroll" href="#blog">PORTFOLIO</a></li>
-						<li><a class="scroll" href="#clients">EXPRIENCE</a></li>
-						<li><a class="scroll" href="#contact">CONTACT</a></li>
-						<a href="#"><span class="img1"> </span></a>
-						<a href="#"><span class="img2"> </span></a>
-						<a href="#"><span class="img3"> </span></a>				 
-						<div class="clearfix"></div>
-						</ul>
-					 <div class="clearfix"></div>
-				 </div>
-			  </div>
-		 </div>
-	 </div>
+<!--banner-->
+<div class="banner">
+	<div class="container">
+		<div class="col-md-3 b-part1">
+			<img src="images/1.jpg" alt=" " />
+			<h1>陈园</h1>
+			<h2>前端工程师</h2>
+		</div>
+		<div class="col-md-4 b-part2">
+			<h3>Contact</h3>
+			<h4><a href="mailto:info@example.com">13103483988@163.com</a></h4>
+			<h4 class="agile">13103483988</h4>
+			<h4>陕西西安</h4>
+		</div>
+		<div class="clearfix"></div>
+	</div>
 </div>
-<!---->
-<section id="main">
-<div class="about" id="about">
-	 <h3>WELCOME TO MY WORLD</h3>
-	 <b></b>
-	 <div class="container">
-		 <div class="about-grids">
-			 <div class="col-md-6 about-info">		
-				 <h4>自我评价</h4>
-				  <label></label>
-				 <h4>前端工程师</h4>
-				 <p>技术方面：
-					 精通html5，css3，js，jquery，能够熟练使用bootstrap等框架，熟悉PHP后台语言。熟练掌握移动端布局。熟练使用git、svn等版本管理工具。
-					 性格方面：
-					 能够很好的融入团队生活，与他人合作，并且对前端工作认真负责，有良好的学习能力。
-				 </p>
-			 </div> 
-			 <div class="col-md-6 about-skill">
-				 <h4>Skills</h4>
-				  <label></label>
-					<div class="skill-grid1">
-						 <div class="skill-bar">
-						 <div class="info"><p>HTML/CSS</p></div>
-						 </div>
-						 <div class="icon"><img src="images/skil.png"></div>
-						 <div class="clearfix"></div>
-					 </div>
-					 <div class="clearfix"></div>
-					 <div class="skill-grid2">
-						 <div class="skill-bar2">
-						 <div class="info2"><p>JS/JQUERY</p></div>
-						 <div class="clearfix"></div>
-						 </div>
-						 <div class="icon"><img src="images/skil.png"></div>
-						 <div class="clearfix"></div>
-					 </div>
-					 <div class="clearfix"></div>
-					 <div class="skill-grid3">
-						 <div class="skill-bar3">
-						 <div class="info3"><p>AJAX</p></div>
-						 <div class="clearfix"></div>
-						 </div>
-						 <div class="icon"><img src="images/skil.png"></div>
-						 <div class="clearfix"></div>
-					 </div>
-			 </div>
-			 <div class="clearfix"></div>
-		 </div>			 
-	 </div>
-	  <a></a>
-</div>	
-<!---->
-<div class="blog" id="blog">
-	 <h3>PORTFOLIO</h3>
-	 <small>我的项目</small>
-	 <p><i>my portfolio</i></p>
-	 <div class="container">	
-		 <div class="blog-top" id="top-sec">
-			 <div class="blog-img">
-				<img src="images/img1.jpg" alt="" class="img-responsive" />
-			 </div>
-			 <div class="img-desc">
-				 <h4>鱼设计APP</h4>
-				 <span></span>
-				 <p>该项目为私人订制家具项目，往常人们购买家具时，需要去往各个家具店选购。通过该APP，用户可以通过该APP为用户搭建的场景，更好的选择自己所需的各类家具。
-				 </p>
-				 <span></span>
-				 <div class="icons">
-						<a href="#"><span class="img1"> </span></a>
-						<a href="#"><span class="img2"> </span></a>
-						<a href="#"><span class="img3"> </span></a>
-				   </div>
-					<div class="caption">
-						<a href="http://cyfish.duapp.com/"><img src="images/link.png" alt=""/></a>
-					</div>
-					<div class="dmnd"></div>				
-			 </div>
-		 </div>
-		 <div class="blog-top" id="top-sec">
-			 <div class="blog-img">
-				<img src="images/img2.jpg" alt="" class="img-responsive" />
-			 </div>
-			 <div class="img-desc" >
-				 <h4>食神居APP</h4>
-				 <span></span>
-				 <p>该项目为移动端项目，美食APP。该APP通过视频向用户展示了各个美食的制作方法，用户可以学习制作。并且用户可以通过点餐系统，选择食材，自行组合菜单。
-				 </p>
-					<span></span>
-					<div class="icons">
-						<a href="#"><span class="img1"> </span></a>
-						<a href="#"><span class="img2"> </span></a>
-						<a href="#"><span class="img3"> </span></a>
-				    </div>
-					<div class="caption">
-						<a href="#"><img src="images/link.png" alt=""/></a>
-					</div>
-					<div class="dmnd"></div>				
-			 </div>
-		 </div>
-		 <div class="clearfix"></div>
-		 
-		 <div class="blog-top" id="bottom-sec">		 
-			 <div class="img-desc blog-sec" >
-				<h4>一碗面</h4>
-				<span></span>
-				 <p>该项目为pc端项目，页面通过使用bootstrap框架实现网站的响应式效果，适配于各个屏幕。通过该项目向用户宣传一碗面企业，吸引更多商户加盟，并且向广大用户宣传了我国历史悠久的面食文化。</p>
-				 <span></span>
-				 <div class="icons">
-					 <a href="#"><span class="img1"> </span></a>
-					 <a href="#"><span class="img2"> </span></a>
-					 <a href="#"><span class="img3"> </span></a>
-				 </div>
-				   <div class="caption2">
-						<a href=""><img src="images/link.png" alt=""/></a>
-					</div>
-					<div class="dmnd2"></div>	
-			 </div>
-			 <div class="blog-img img-sec">
-				<img src="images/img3.jpg" alt="" class="img-responsive" />
-			 </div>		 
-		 </div>		 
-		 
-		 <div class="blog-top" id="bottom-sec">		 
-			 <div class="img-desc blog-sec" >
-				<h4>BLOG</h4>
-				<span></span>
-				 <p>该项目为pc端项目，页面通过使用bootstrap框架实现网站的响应式效果，适配于各个屏幕。通过该项目向用户宣传一碗面企业，吸引更多商户加盟，并且向广大用户宣传了我国历史悠久的面食文化。.</p>
-				 <span></span>
-				<div class="icons">
-					 <a href="#"><span class="img1"> </span></a>
-					 <a href="#"><span class="img2"> </span></a>
-					 <a href="#"><span class="img3"> </span></a>
-				 </div>
-				   <div class="caption2">
-						<a href=""><img src="images/link.png" alt=""/></a>
-					</div>
-					<div class="dmnd2"></div>	
-			 </div>
-			 <div class="blog-img img-sec">
-				<img src="images/img4.jpg" alt="" class="img-responsive" />
-			 </div>		 
-		 </div>	
-		 <!--<div class="clearfix"></div>-->
-			<!--<div class="load"><a href="#">Load More</a></div>-->
-	 </div>
-</div>
-<!---->
-<div class="client" id="clients">
-		 <h3>WHAT THEY SAY</h3>
-		 <small></small>
-		 <script>
-		// You can also use "$(window).load(function() {"
-		$(function () {
-		  // Slideshow 1
-		  $("#slider1").responsiveSlides({
-			 auto: true,
-			 nav: true,
-			 speed: 500,
-			 namespace: "callbacks",
-		  });
-		});
-	  </script>
-	  <div class="container2">
-			<div class="slider">
-				<ul class="rslides" id="slider1">
-				 <li>
-				 <div class="person1"></div>
-				 <div class="about-add-grid">
-				 <p>"  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.sunt in culpa qui officia deserunt mollit anim id est laborum. pariatur sunt in culpa qui. Stet clita</p>
-					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserun.sint occaecat cupidatat non proident. </p>
-				 <a href="#"><b>Victoiria Davydova</b>,Vogue Russia</a>		 
-				 </div>
-				 <div class="clearfix"></div>
-			  </li>	
-			  <li>
-				 <div class="person2"></div>
-				 <div class="about-add-grid">
-				 <p>"  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.sunt in culpa qui officia deserunt mollit anim id est laborum. pariatur sunt in culpa qui. Stet clita</p>
-					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserun.sint occaecat cupidatat non proident. </p>
-				 <a href="#"><b>Victoiria Davydova</b>,Vogue Russia</a>		 
-				 </div>
-				 <div class="clearfix"></div>
-			  </li>	
-			 </ul>		
-			</div>
-	  </div>
-</div>
-<!---->
-<div class="container">
-	 <ul id="flexiselDemo1">
-			<li>
-				<div class="biseller-column">
-				<img src="images/s1.png" alt="">
-				</div>
-			</li>
-			<li>
-				<div class="biseller-column">
-				<img src="images/s2.png" alt="">
-				</div>
-			</li>
-			<li>
-				<div class="biseller-column">
-				<img src="images/s3.png" alt="">
-				</div>
-			</li>
-			<li>
-				<div class="biseller-column">
-				<img src="images/s2.png" alt="">
-				</div>
-			</li>
-			<li>
-				<div class="biseller-column">
-				<img src="images/s1.png" alt="">
-				</div>
-			</li>
-			<li>
-				<div class="biseller-column">
-				<img src="images/s3.png" alt="">
-				</div>
-			</li>
-		</ul>
-		<script type="text/javascript">
-		 $(window).load(function() {
-			$("#flexiselDemo1").flexisel({
-				visibleItems: 3,
-				animationSpeed: 1000,
-				autoPlay: true,
-				autoPlaySpeed: 3000,    		
-				pauseOnHover: true,
-				enableResponsiveBreakpoints: true,
-				responsiveBreakpoints: { 
-					portrait: { 
-						changePoint:480,
-						visibleItems: 1
-					}, 
-					landscape: { 
-						changePoint:640,
-						visibleItems: 2
-					},
-					tablet: { 
-						changePoint:768,
-						visibleItems: 3
-					}
-				}
-			});
-			
-		});
-	   </script>
-	   <script type="text/javascript" src="js/jquery.flexisel.js"></script>
-</div>   
-<!---->
-<div class="contact text-center" id="contact">
-	<h3>CONTACT ME</h3>
-	<i class="line"></i>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam est metus, cursus quis tincidunt sit amet, varius sit amet lorem</p>
-	<form>
-	<input type="text" placeholder="Name" required/>
-	<input type="text" placeholder="E-mail" required/>
-	<textarea placeholder="Message"></textarea>
-	<input type="submit" value="SEND"/>
-	</form>
-</div>
-<!---->
-<div class="fotter">
-	 <div class="scale"></div>
-	 <a href=""><img src="images/ftr.logo.png" alt="" /></a>
-	 <p>Template by <a href="http://w3layouts.com/">W3layouts</a></p>
-</div>
+<!--//banner-->
 
-<!---->
-</section>	
-<!---->
+<!--about-->
+<div class="about">
+	<div class="container">
+		<h3>About Me</h3>
+		<label class="line"></label>
+		<div class="photo"><img src="images/1.jpg" alt=" " /></div>
+		<p>技术方面：
+			精通html5，css3，js，jquery，能够熟练使用bootstrap等框架，熟悉PHP后台语言。熟练掌握移动端布局。熟练使用git、svn等版本管理工具。</p>
+		<p>性格方面：
+			能够很好的融入团队生活，与他人合作，并且对前端工作认真负责，有良好的学习能力。</p>
+	</div>
+</div>
+<!--//about-->
+
+
+<!--skills-->
+<div class="skills">
+	<div class="container">
+		<h3>My Skills</h3>
+		<label class="line"></label>
+			<div class="col-md-6 skills-left">
+				<!--<h4>The standard chunk</h4>-->
+				<p>精通HTML与CSS，快速实现静态页面的布局；精通JavaScript与jQuery，快速实现静态页面的动态效果。</p>
+				<p>熟练掌握ajax，在不重新加载整个页面的情况下实现静态页面通过ajax与服务器交换数据并更新部分网页；掌握PHP与MySQL，处理数据库数据并向页面返回数据。</p>
+			</div>
+			<div class="col-md-6 skills-right">
+				<div class="bar_group">
+					<div class='bar_group__bar thin' label='HTML' show_values='true' tooltip='true' value='475'></div>
+					<div class='bar_group__bar thin' label='Java Script' show_values='true' tooltip='true' value='475'></div>
+					<div class='bar_group__bar thin' label='PHP' show_values='true' tooltip='true' value='475'></div>
+					<div class='bar_group__bar thin' label='AJAX' show_values='true' tooltip='true' value='475'></div>
+				</div>
+				<script src="js/bars.js"></script>
+			</div>
+			<div class="clearfix"></div>
+			
+	</div>
+</div>
+<!--/skills-->
+
+<!-- download-->
+<div class="download">
+	<h3>Download my resume here</h3>
+	<a href="javascript:;"  onclick="Click()">Download</a>
+</div>
+<!-- //download -->	
+		
+<!--portfolio-->
+<div id="portfolio" class="portfolio">
+		<div class="container">
+			<h3>My Portfolio</h3>
+			<label class="line"></label>
+			<div class="sap_tabs">			
+				<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+					<ul class="resp-tabs-list wow fadeInUp animated" data-wow-delay=".7s">
+						<li class="resp-tab-item"><span>All</span></li>
+						<li class="resp-tab-item"><span>PC</span></li>
+						<li class="resp-tab-item"><span>APP</span></li>
+					</ul>	
+					<div class="clearfix"> </div>	
+					<div class="resp-tabs-container">
+						<div class="tab-1 resp-tab-content">
+							<div class="tab_img">
+								<div class="col-md-4 portfolio-grids grid first">
+									<div class="effect1 wow fadeInUp animated" data-wow-delay=".5s">
+										<a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/respose/res/master/index.html" class="swipebox" title="">
+											<img src="images/g1.jpg" alt="" class="img-responsive" />
+											<div class="figcaption">
+												<p>爱尚一碗面</p>
+											</div>
+										</a>	
+									</div>
+								</div>
+								<div class="col-md-4 portfolio-grids grid">
+									<div class="effect1 wow fadeInUp animated" data-wow-delay=".7s">
+										<a href="https://htmlpreview.github.io/?https://github.com/food-uek/food/blob/master/html/h-main.html" class="swipebox" title="">
+											<img src="images/g2.jpg" alt="" class="img-responsive" />
+											<div class="figcaption">
+												<p>食神居美食APP</p>
+											</div>
+										</a>	
+									</div>
+								</div>
+								<div class="col-md-4 portfolio-grids grid">
+									<div class="effect1 wow fadeInUp animated" data-wow-delay=".9s">
+										<a href="images/g3.jpg" class="swipebox" title="">
+											<img src="images/g3.jpg" alt="" class="img-responsive" />
+											<div class="figcaption">
+												<p>鱼设计家居APP</p>
+											</div>
+										</a>	
+									</div>
+								</div>
+								<div class="col-md-4 portfolio-grids grid grid-mdl">
+									<div class="effect1 wow fadeInUp animated" data-wow-delay=".5s">
+										<a href="chenyuanblog.duapp.com" class="swipebox" title="">
+											<img src="images/g4.jpg" alt="" class="img-responsive" />
+											<div class="figcaption">
+												<p>陈园的blog</p>
+											</div>
+										</a>	
+									</div>
+								</div>
+								<div class="col-md-4 portfolio-grids grid grid-mdl">
+									<div class="effect1 wow fadeInUp animated" data-wow-delay=".7s">
+										<a href="https://qianruoxi.github.io/poker/" class="swipebox" title="">
+											<img src="images/g5.jpg" alt="" class="img-responsive" />
+											<div class="figcaption">
+												<p>13点扑克游戏</p>
+											</div>
+										</a>	
+									</div>
+								</div>
+								<div class="col-md-4 portfolio-grids grid grid-mdl">
+									<div class="effect1 wow fadeInUp animated" data-wow-delay=".9s">
+										<a href="" class="swipebox" title="">
+											<img src="images/g6.jpg" alt="" class="img-responsive" />
+											<div class="figcaption">
+												<p>自制音乐播放器</p>
+											</div>
+										</a>	
+									</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="tab-1 resp-tab-content">
+							<div class="tab_img">
+                                <div class="col-md-4 portfolio-grids grid first">
+                                    <div class="effect1 wow fadeInUp animated" data-wow-delay=".5s">
+                                        <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/respose/res/master/index.html" class="swipebox" title="">
+                                            <img src="images/g1.jpg" alt="" class="img-responsive" />
+                                            <div class="figcaption">
+                                                <p>爱尚一碗面</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 portfolio-grids grid grid-mdl">
+                                    <div class="effect1 wow fadeInUp animated" data-wow-delay=".5s">
+                                        <a href="chenyuanblog.duapp.com" class="swipebox" title="">
+                                            <img src="images/g4.jpg" alt="" class="img-responsive" />
+                                            <div class="figcaption">
+                                                <p>陈园的blog</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 portfolio-grids grid grid-mdl">
+                                    <div class="effect1 wow fadeInUp animated" data-wow-delay=".7s">
+                                        <a href="https://qianruoxi.github.io/poker/" class="swipebox" title="">
+                                            <img src="images/g5.jpg" alt="" class="img-responsive" />
+                                            <div class="figcaption">
+                                                <p>13点扑克游戏</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 portfolio-grids grid grid-mdl">
+                                    <div class="effect1 wow fadeInUp animated" data-wow-delay=".9s">
+                                        <a href="" class="swipebox" title="">
+                                            <img src="images/g6.jpg" alt="" class="img-responsive" />
+                                            <div class="figcaption">
+                                                <p>自制音乐播放器</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<div class="tab-1 resp-tab-content">
+							<div class="tab_img">
+                                <div class="col-md-4 portfolio-grids grid">
+                                    <div class="effect1 wow fadeInUp animated" data-wow-delay=".7s">
+                                        <a href="https://htmlpreview.github.io/?https://github.com/food-uek/food/blob/master/html/h-main.html" class="swipebox" title="">
+                                            <img src="images/g2.jpg" alt="" class="img-responsive" />
+                                            <div class="figcaption">
+                                                <p>食神居美食APP</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 portfolio-grids grid">
+                                    <div class="effect1 wow fadeInUp animated" data-wow-delay=".9s">
+                                        <a href="images/g3.jpg" class="swipebox" title="">
+                                            <img src="images/g3.jpg" alt="" class="img-responsive" />
+                                            <div class="figcaption">
+                                                <p>鱼设计家居APP</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--ResponsiveTabs-->
+			<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+			<script type="text/javascript">
+				$(document).ready(function () {
+					$('#horizontalTab').easyResponsiveTabs({
+						type: 'default', //Types: default, vertical, accordion           
+						width: 'auto', //auto or any width like 600px
+						fit: true   // 100% fit in a container
+					});
+				});		
+			</script>
+			<!--//ResponsiveTabs-->
+		</div>
+	</div>
+<!--//portfolio-->
+
+
+<!-- blog -->
+	<!--<div class="blog">-->
+		<!--<div class="container">-->
+			<!--<h3>Seminars</h3>-->
+			<!--<label class="line"></label>-->
+			<!--<div class="blog-grids">-->
+				<!--<div class="col-md-6 blog-left">-->
+					<!--<div class="col-md-3 agile1">-->
+						<!--<h5>25</h5>-->
+						<!--<h6>March-2016</h6>-->
+						<!--<i class="fa fa-envelope" aria-hidden="true"></i>-->
+						<!--<a href="#"><h6 class="spcl">Comments-7</h6></a>-->
+						<!--<i class="fa fa-eye" aria-hidden="true"></i>-->
+						<!--<a href="#"><h6 class="spcl">Views-28</h6></a>-->
+					<!--</div>-->
+					<!--<div class="col-md-9 agile2">-->
+						<!--<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/b1.jpg" alt="" /></a>-->
+						<!--<a href="#" data-toggle="modal" data-target="#myModal"><h4>Contrary to popular belief</h4></a>-->
+						<!--<p>It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor</p>-->
+					<!--</div>-->
+					<!--<div class="clearfix"></div>-->
+				<!--</div>-->
+				<!--<div class="col-md-6 blog-right">-->
+					<!--<div class="col-md-3 agile1">-->
+						<!--<h5>10</h5>-->
+						<!--<h6>Feb-2016</h6>-->
+						<!--<i class="fa fa-envelope" aria-hidden="true"></i>-->
+						<!--<a href="#"><h6 class="spcl">Comments-8</h6></a>-->
+						<!--<i class="fa fa-eye" aria-hidden="true"></i>-->
+						<!--<a href="#"><h6 class="spcl">Views-48</h6></A>-->
+					<!--</div>-->
+					<!--<div class="col-md-9 agile2">-->
+						<!--<a href="#" data-toggle="modal" data-target="#myModal2"><img src="images/b2.jpg" alt="" /></a>-->
+						<!--<a href="#" data-toggle="modal" data-target="#myModal2"><h4>The standard chunk</h4></a>-->
+						<!--<p>It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor</p>-->
+					<!--</div>-->
+					<!--<div class="clearfix"></div>				-->
+				<!--</div>-->
+				<!--<div  class="clearfix"></div>-->
+			<!--</div>-->
+		<!--</div>-->
+	<!--</div>-->
+<!-- //blog -->
+
+<!--contact-->
+<div class="contact">
+	<div class="container">
+		<h3>Contact</h3>
+		<label class="line"></label>
+		<div class="col-md-4 c-w3l">
+			<i class="fa fa-map-marker" aria-hidden="true"></i>
+			<h4>陕西西安</h4>
+		</div>
+		<div class="col-md-4 c-w3l c-mail">
+			<i class="fa fa-envelope" aria-hidden="true"></i>
+			<h4><a href="mailto:info@example.com">13103483988@163.com</a></h4>
+		</div>
+		<div class="col-md-4 c-w3l c-phn">
+			<i class="fa fa-phone" aria-hidden="true"></i>
+			<h4>13103483988</h4>
+		</div>
+		<div class="clearfix"></div>
+		<form action="#" method="post">
+			<input type="text" name="name" class="name" placeholder="Your Name" required="">
+			<input type="text" name="email" class="email" placeholder="Your Email" required="">
+			<textarea  name="your message" placeholder="Your Message"  required=""></textarea>
+			<input type="submit" value="Send Message">
+		</form>
+	</div>
+</div>
+<!--//contact-->
+
+
+<!--footer-->
+<!--<div class="footer-agileinfo">-->
+	<!--<p> &copy; 2016 Curriculum vitae. All Rights Reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>-->
+<!--</div>-->
+<!--//footer-->
+<!--common js-->
+
+<script src="js/bootstrap.min.js"></script>
+<!--//common js-->
 </body>
 </html>
+<script>
+	$(function () {
+        function Click(){
+            window.location.href="陈园前端求职简历.doc";
+        }
+    })
+</script>
